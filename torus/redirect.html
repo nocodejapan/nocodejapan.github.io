@@ -142,7 +142,7 @@
         "tdsdk://tdsdk/oauthCallback",
         "torusapp://org.torusresearch.customauthandroid/redirect",
         "torus://org.torusresearch.sample/redirect",
-        "torusapp://com.pushtnoification.test",
+        "torusapp://com.pushtnoification.test/redirect",
       ];
       try {
         var url = new URL(location.href);
@@ -197,7 +197,11 @@
             instanceParams.redirectUri,
             "or use whitelisted URLs"
           );
-          alert("Please whitelist, ", instanceParams.redirectUri, "or use whitelisted URLs")
+          alert(
+            "Please whitelist, " +
+              instanceParams.redirectUri +
+              " or use whitelisted URLs"
+          );
         }
       } catch (err) {
         console.error(err, "error in redirect");
